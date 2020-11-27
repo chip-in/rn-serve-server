@@ -1,4 +1,4 @@
-import { ResourceNode, ServiceEngine, Proxy, Subscriber } from '@chip-in/resource-node';
+import { ResourceNode, ServiceEngine} from '@chip-in/resource-node';
 const handler = require('serve-handler');
 import http from 'http'
 import webClient from 'request';
@@ -133,6 +133,7 @@ class ServeServer extends ServiceEngine{
         });
       })
   }
+
   _convertBody(option, body) {
     if (body == null) {
       return ;
@@ -145,8 +146,8 @@ class ServeServer extends ServiceEngine{
     } else {
       option.body = JSON.stringify(body);
     }
-
   }
+  
 }
 
 var rnode = new ResourceNode(coreNodeUrl, nodeClass);
