@@ -1,0 +1,9 @@
+name: rn-serve-server-example
+serviceEngines:
+- class: ServeServer
+  path: /a/serve-example/
+  mode: singletonMaster
+  serveOption:
+    rewrites:
+    - source: "**"
+      destination: "/index.html"
