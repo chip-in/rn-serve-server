@@ -8,7 +8,8 @@ RUN mkdir -p ${CI_HOME}/ \
   && git clone https://github.com/chip-in/rn-serve-server.git rn-serve-server \
   && cd ${CI_HOME}/rn-serve-server \
   && npm i \
-  && npm run cleanbuild
+  && npm run cleanbuild \
+  && ln -s ${CI_HOME}/rn-serve-server ${CI_HOME}/rn-contents-server
 
 WORKDIR ${CI_HOME}/rn-serve-server
 
