@@ -12,7 +12,7 @@
     "prepare": "npm run cleanbuild"
   },
   "dependencies": {
-    "@chip-in/resource-node": "0.0.24",
+    "@chip-in/resource-node": "^0.0.25",
     "request": "^2.88.2",
     "serve-handler": "^6.1.3"
   },
