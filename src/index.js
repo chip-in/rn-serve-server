@@ -121,7 +121,7 @@ class ServeServer extends ServiceEngine{
           var url = "http://localhost:" + this.port + dstPath;
           var option = {
             url,
-            headers: req.headers,
+            headers: Object.assign({}, req.headers),
             encoding: null
           };
           this._convertBody(option,  req.body);
@@ -145,6 +145,12 @@ class ServeServer extends ServiceEngine{
       option.body = body;
     } else {
       option.body = JSON.stringify(body);
+    }
+    if (option.headers) {
+      delete option.headers["content-length"];
+
+      // Body has already been decoded by core-node.
+      delete option.headers["content-encoding"];
     }
   }
   
