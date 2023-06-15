@@ -1,6 +1,6 @@
 {
   "name": "rn-serve-server",
-  "version": "0.1.10",
+  "version": "0.1.11-rc52babef9.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "prepare": "npm run cleanbuild"
   },
   "dependencies": {
-    "@chip-in/resource-node": "^0.1.10",
+    "@chip-in/resource-node": "0.1.16-rc01775afc.6",
     "request": "^2.88.2",
     "serve-handler": "^6.1.3"
   },
